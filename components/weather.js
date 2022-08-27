@@ -7,11 +7,11 @@ import Constants from 'expo-constants';
 export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState(
         {
-            main: '-',
-            description: '-',
+            main: 'waitting..',
+            description: 'waitting..',
             temp: 0,
-            humidity: '-',
-            feels_like: '-',
+            humidity: 'waitting..',
+            feels_like: 'waitting..',
         }
     )
     

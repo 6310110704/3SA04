@@ -65,7 +65,7 @@ const style = StyleSheet.create(
         titleText: {
             fontSize: 32,
             fontWeight: "bold",
-            color: 'white',
+            color: 'tan',
             textAlign: 'center'
         }
     }

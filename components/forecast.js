@@ -28,18 +28,18 @@ const style = StyleSheet.create(
     {
         normalText: {
             textAlign: 'center',
-            fontSize: 30,
+            fontSize: 20,
             fontWeight: "bold",
-            color: 'white',
+            color: 'lavender',
 
         },
 
         tempNum: {
-            fontSize: 60, 
+            fontSize: 50, 
             fontWeight: "bold", 
-            color: 'white', 
+            color: 'plum', 
             textAlign: 'center',
-            lineHeight: 58
+            lineHeight: 40
 
         }
     }

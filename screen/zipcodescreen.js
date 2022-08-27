@@ -16,46 +16,67 @@ const availableZipItems = [
     { place: 'Phuket', code: '83000' },
    ]
 
-const ZipItem = ({place, code, navigation}) => (
+   const ZipItem = ({place, code, navigation}) => (
     <TouchableHighlight onPress={() => {
         navigation.navigate("Weather", {zipCode: code})
     }}>
+
+      <>
         <View style= {style.zipItem}>
-            <Text>{place}</Text>
-            <Text>{code}</Text>
+            <Text style= {style.zipPlace}>{place}</Text>
+            <Text style= {style.zipCode}>{code}</Text>
         </View>
+        <View>
+          <Text style= {{fontSize: 1}}></Text>
+        </View>
+      </>
+
+
     </TouchableHighlight>
 
 )
-
 const _keyExtractor = item => item.code
-
 export default function ZipCodeScreen() {
     const navigation = useNavigation()
     return (
-        <View>
+          <View>
             <FlatList
             data = {availableZipItems}
             key = {_keyExtractor}
             renderItem = {({item}) => <ZipItem {...item} navigation={navigation}/>}
-        />
-        <StatusBar styte="auto" />
-        </View>  
+          />
+          <StatusBar styte="auto" />
+        </View> 
+         
     )
 }
-
 const style = StyleSheet.create(
     {
       zipItem: {
-        flex: 1,
+        flex: 2,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-evenly',
+        backgroundColor: 'wheat'
       },
       zipPlace: {
-        flex: 1,
+        flex: 2,
+        fontSize: 20,
+        fontWeight: "bold",
+        color: 'black',
+        textAlign: 'left'
       },
       zipCode: {
-        flex: 1,
-      }
+        flex: 2,
+        textAlign: 'center',
+        fontSize: 20,
+        fontWeight: "bold",
+        color: 'black',
+        textAlignVertical: 'ceenter'
+      },
+      backdrop: {
+        alignItems: 'right',
+        width: '100%',
+        height: '100%'
+    },
     }
-  ) 
+  )

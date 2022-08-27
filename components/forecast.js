@@ -16,6 +16,10 @@ export default function Forecast(props) {
                 <Text style={style.tempNum}>{props.temp}</Text>
                 <Text style={style.normalText}> °C</Text>
             </View>
+            <View>
+                    <Text style={style.normalText}>Humidity {props.humidity} %  </Text>
+                    <Text style={style.normalText}>Feel Like {props.feels_like} °C    </Text>
+                </View>
         </View> 
     );
 }
